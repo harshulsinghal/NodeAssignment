@@ -1,12 +1,12 @@
-# NodeChat
+# NodeAssignment
 For McKinley &amp; Rice
 
 # Steps to Configure and Run Node Project
 
-1) Clone into the project https://github.com/harshulsinghal/NodeChat.git
+1) Clone into the project https://github.com/harshulsinghal/NodeAssignment.git
 2) Open file utilities/connection.js and change the `const url = "mongodb://localhost:27017/UsersDB"` to your mongoDB url
 3) Make sure your mongodb is running
-4) Open the NodeChat folder and execute the following commands:
+4) Open the NodeAssignment folder and execute the following commands:
     `npm install`
     `cd src`
     `node app`
