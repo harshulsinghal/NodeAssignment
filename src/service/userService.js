@@ -63,4 +63,17 @@ user.getChatMessages = (from, to) => {
         }
     })
 }
+
+user.getFriends = (email) => {
+    return dbLayer.getFriends(email).then(response=>{
+        if(response.length)
+        return response;
+        else {
+            let err = new Error('No Friends Found');
+            err.status = 500;
+            throw err;
+        }
+    })
+}
+
 module.exports = user;

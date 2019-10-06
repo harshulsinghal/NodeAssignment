@@ -46,4 +46,12 @@ router.get('/getMessages/:from/:to', (req, res, next) => {
     });
 })
 
+router.get('/getFriends/:from', (req, res, next) => {
+    return service.getFriends(req.params.from).then(item => {
+        res.json({ data: item })
+    }).catch(err => {
+        next(err);
+    });
+})
+
 module.exports = router;

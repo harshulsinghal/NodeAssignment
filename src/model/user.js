@@ -125,4 +125,16 @@ user.getChatMessages = (from, to) => {
     })
 }
 
+user.getFriends = (from) => {
+    return collection.getChatCollection().then(chatColl => {
+        return chatColl.distinct( "msgTo" ,{ msgFrom: from }).then(data => {
+            if (data.length > 0) {
+                return data;
+            } else {
+                return null;
+            }
+        })
+    })
+}
+
 module.exports = user;
